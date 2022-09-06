@@ -8,3 +8,7 @@ AllCops:
     - 'bin/*'
     - 'config/**/*'
     - 'db/**/*'
+RSpec/ExampleLength:
+  Max: 7
+Style/Documentation:
+  Enabled: false

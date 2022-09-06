@@ -3,4 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  defaults format: :json do
+    get '/health', to: ->(_env) { [204, {}, ['']] }
+
+    resources :users, only: %i[index create]
+    resource :users, only: :destroy
+  end
 end
